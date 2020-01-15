@@ -1,0 +1,177 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Brian Courtehoute</title>
+	
+	<div class="row">
+  <div class="column"></div>
+  <div class="column"></div>
+  </div>
+	
+	<style>
+	  body {
+    width: 800px;
+    margin-top : 50px;
+    margin-bottom : 10px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .column {
+      float: left;
+      width: 800px;
+    }
+    .left {
+      width: 185px;
+    }
+
+    .right {
+      width: 615px;
+}
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    a {
+      color: #007ee6;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #007ee6;
+      text-decoration: none;
+    }
+		h1 {
+			font-family: Helvetica, sans-serif;
+			background-color: black;
+			text-align: center;
+			border-style: solid;
+			border-width: 5px;
+			border-color: #003865;
+			box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			padding: 5px;
+			margin-bottom: 25px;
+		}
+		h2 {
+			font-family: Helvetica, sans-serif;
+			margin-top: 25px;
+			margin-bottom: 0px;
+		}
+		p {
+			color: lightgray;
+			font-family: Helvetica, sans-serif;
+			margin-top:15px;
+			margin-bottom:15px;
+		}
+
+		ul {
+			border-style: solid;
+			border-width: 5px;
+			border-color: lightgray;
+			background-color: black;
+			color: lightgray;
+			font-family: Helvetica, sans-serif;
+			padding-right: 10px;
+			padding-left: 10px;
+			margin-top: 5px;
+		}
+		li {
+		  margin-left: 15px;
+		  margin-top:15px;
+			margin-bottom:15px;
+		}
+ 		img  {
+      float: left;
+      margin-right: 10px;
+      margin-top: 5px;
+      border-style: solid;
+			border-width: 5px;
+			border-color: lightgray;
+    }
+	</style>
+	
+</head>
+<body style="background-color:#003865;font:">
+
+	<h1 style="color:lightgray">Brian Courtehoute</h1>
+	
+	<div class="row">
+	  <div class="column left" style="background-color:#003865;">
+      <img src="pfp.jpg" alt="Profile" width="160" height="215" id="hp">
+    </div>
+    <div class="column right" style="background-color:#003865;">
+    <ul>
+      <p>
+	  I'm a second-year PhD student at the <a href="http://www.york.ac.uk/" target="_blank">University of York</a> in the <a href="http://www.cs.york.ac.uk/" target="_blank">Department of Computer Science</a>. My supervisor is <a href="https://www-users.cs.york.ac.uk/det/" target="_blank">Detlef Plump</a>. I have an MSc in Mathematics and Computer Science (University of Leeds, 2018), and a Bachelor in Mathematics (University of Luxembourg, 2017).
+	</p>
+
+	</ul>
+    </div>
+  </div>
+	
+	
+	
+	<h2 style="color:lightgray">Research</h2>
+	<ul>
+	<p>
+	  My research is based on developing <a href="https://uoycs-plasma.github.io/GP2/" target="_blank">GP 2</a>, a rule-based graph programming language that frees the programmer from low-level data structures for graphs. The input of a GP 2 program is a host graph, and is changed using rules that search for a specific subgraph and transform it. The rules are organised using different control flow structures. There is a C compiler for this high-level language.
+</p>
+<p>
+Computing with Graph Transformation is generally slow due to graph matching, which can be high-degree polynomial. My aim is to refine GP 2 programs into more efficient ones using roots for instance. Roots are special nodes that, locally, allow for constant time graph matching. Roots have previously led to a <a href="http://www.cs.york.ac.uk/plasma/publications/pdf/BakPlump.ICGT.16.pdf" target="_blank">2-colouring program</a> compiled to C that matches the speed of tailor-made C programs.
+	</p>
+	</ul>
+	
+	<h2 style="color:lightgray">Publications</h2>
+	<ul>
+  <li>G. Campbell, B. Courtehoute and D. Plump<br>
+<a href="http://www.cs.york.ac.uk/plasma/publications/pdf/CampbellCourtehoutePlump.CALCO.19.pdf" target="_blank">Linear-Time Graph Algorithms in GP 2</a><br>
+<em>Proc. 8th Conference on Algebra and Coalgebra in Computer Science (CALCO 2019)</em>. Volume 139 of Leibniz International     Proceedings in Informatics (LIPICS), pages 16:1-16:23, 2019.<br>
+doi: <a href="https://doi.org/10.4230/LIPIcs.CALCO.2019.16" target="_blank">10.4230/LIPIcs.CALCO.2019.16</a></li>
+</ul>
+	
+	
+<h2 style="color:lightgray">Talks</h2>
+<ul>
+  <li><a href="calco-2019.pdf" target="_blank">Linear-Time Graph Algorithms in GP 2</a><br>
+    8th Conference on Algebra and Coalgebra in Computer Science, London, UK, 5 June 2019.</li>
+
+	<li><a href="bctcs-2019.pdf" target="_blank">Rule-Based Graph Programming: Linear-Time Graph Algorithms in GP 2</a><br>
+  35th British Colloquium for Theoretical Computer Science, Durham, UK, 17 April 2019.</li>
+	
+</ul>
+	
+	
+	
+	<h2 style="color:lightgray">Teaching</h2>
+
+<ul>
+  <p>I’ve been a teaching assistant in several undergraduate Computer Science modules. This involves demonstrating in problem classes and marking.</p>
+  <li>
+    <a href="https://www.york.ac.uk/students/studying/manage/programmes/module-catalogue/module/COM00005C/2018-19" target="_blank">MFCS</a> (Spring 2018-2019)<br>
+A first year module about formal languages and various automata.
+  </li>
+  <li>
+    <a href="https://www.york.ac.uk/students/studying/manage/programmes/module-catalogue/module/COM00002I/2019-20" target="_blank">COCO</a> (Autumn 2018-2019, 2019-2020)<br>
+A second year module about Computability Theory and Complexity Theory.
+  </li>
+  <li>
+    <a href="https://www.york.ac.uk/students/studying/manage/programmes/module-catalogue/module/COM00026H/2019-20" target="_blank">GRAT</a> (Spring 2019-2020)<br>
+A third year module on computing with rule-based Graph Transformation.
+  </li>
+</ul>
+	
+	<h2 style="color:lightgray">Contact</h2>
+	<ul>
+	<p>
+	  Email: bc956 at york.ac.uk<br /> 
+    Office: CSE/215
+  </p>
+  </ul>
+	
+	
+</body>
+
+</html>
+
