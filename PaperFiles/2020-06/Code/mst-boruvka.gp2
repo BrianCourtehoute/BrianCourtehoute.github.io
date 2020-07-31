@@ -16,9 +16,9 @@ FindLoop = find_forward!; if flag then Minimise! else (try MinSetup); try find_b
 MinSetup = try min_init2 then Success else (try min_init1 then Success)
 Success = MinWithS!; set_flag
 Minimise = try MinWithN else MinWithoutN
-MinWithS = {min_s, min_sn, min_sp, min_snp, min1_st, min2_st, min1_stn, min2_stn, min1_stp, min2_stp}
-MinWithN = {min_n, min_np, min_sn, min_snp, min_tn, min_tnp, min1_stn, min2_stn}
-MinWithoutN = {min, min_p, min_s, min_sp, min_t, min_tp, min1_st, min2_st, min1_stp, min2_stp}
+MinWithS = {min_s, min_sn, min_sp, min_snp, min1_st, min2_st}
+MinWithN = {min_n, min_np, min_sn, min_snp, min_tn, min_tnp}
+MinWithoutN = {min, min_p, min_s, min_sp, min_t, min_tp, min1_st, min2_st}
 
 ColourBlue = blue_init; BlueLoop!
 BlueLoop = blue_forward!; try blue_back else break
@@ -174,52 +174,6 @@ n0, n1, n2
 where i<=j
 
 
-min2_stp (i,j:int; x,y:list)
-[
-	(n0(R), x#grey)
-	(n1(R), y#red)
-	|
-	(e2, n1, n0, j:0#green)
-	(e0(B), n0, n1, i)
-]
-=>
-[
-	(n0(R), x#grey)
-	(n1(R), y#red)
-	|
-	(e2, n1, n0, j#green)
-	(e0(B), n0, n1, i#green)
-]
-interface = 
-{
-n0, n1
-}
-where i<j
-
-
-min1_stp (i,j:int; x,y:list)
-[
-	(n0(R), x#grey)
-	(n1(R), y#red)
-	|
-	(e2, n0, n1, j:0#green)
-	(e0(B), n0, n1, i)
-]
-=>
-[
-	(n0(R), x#grey)
-	(n1(R), y#red)
-	|
-	(e2, n0, n1, j#green)
-	(e0(B), n0, n1, i#green)
-]
-interface = 
-{
-n0, n1
-}
-where i<j
-
-
 create_flag ()
 [
 	|
@@ -259,27 +213,7 @@ n0, n1, n2
 where i<j
 
 
-min1_stn (i,j:int; x,y:list)
-[
-	(n0(R), x#grey)
-	(n1(R), y#red)
-	|
-	(e2, n0, n1, j#green)
-	(e0(B), n0, n1, i#green)
-]
-=>
-[
-	(n0(R), x#grey)
-	(n1(R), y#red>)
-	|
-	(e2, n0, n1, j)
-	(e0(B), n0, n1, i:0#green)
-]
-interface = 
-{
-n0, n1
-}
-where i<=j
+
 
 
 min_p (i,j:int; x,y,z,t:list)
@@ -418,29 +352,6 @@ interface =
 {
 n0
 }
-
-min2_stn (i,j:int; x,y:list)
-[
-	(n0(R), x#grey)
-	(n1(R), y#red)
-	|
-	(e2, n1, n0, j#green)
-	(e0(B), n0, n1, i#green)
-]
-=>
-[
-	(n0(R), x#grey)
-	(n1(R), y#red)
-	|
-	(e2, n1, n0, j)
-	(e0(B), n0, n1, i:0#green)
-]
-interface = 
-{
-n0, n1
-}
-where i<=j
-
 
 min_s (i,j:int; x,y,z:list)
 [
